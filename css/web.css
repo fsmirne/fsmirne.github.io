@@ -110,7 +110,7 @@ div#contentfooter{width:100%;padding:0;margin:0;font-size:11px;line-height:140%;
 * html .diyw
 div#contentfooter{height:1%;overflow:visible}div#contentfooter div.leftrow,
 .diyw div#contentfooter
-div.leftrow{float:left;text-align:left;width:55%}div#contentfooter div.rightrow,
+div.leftrow{float:left;text-align:left;width:70%}div#contentfooter div.rightrow,
 .diyw div#contentfooter
 div.rightrow{float:right;text-align:right;width:42%}span.loggedin{display:none}.loggedout{display:none}.diyw a.switchViewWeb,
 .diyw
