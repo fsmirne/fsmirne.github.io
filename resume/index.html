@@ -57,26 +57,26 @@
 			}
 		}
 	</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="format-detection" content="telephone=no">
-	<meta name="keywords" content="About, we, us, organization">
-	<meta name="description" content=", Chicago">
+	<meta name="keywords" content="Flavio Smirne, resume, computer engineer, software engineer, Orlando, FL">
+	<meta name="description" content="Resume of Flavio Smirne - Computer engineer and entrepreneur based in Orlando, FL.">
 	<meta name="robots" content="index,follow">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://www.smirne.com/resume">
 	<meta property="og:title" content="Flavio Smirne's Homepage - Resume">
-	<meta property="og:description" content="Chicago">
+	<meta property="og:description" content="Resume of Flavio Smirne - Computer engineer and entrepreneur based in Orlando, FL.">
+	<meta property="og:image" content="https://www.smirne.com/img/touchicon.png">
 	<meta property="business:contact_data:country_name" content="United States">
-	<meta property="business:contact_data:locality" content="Chicago">
+	<meta property="business:contact_data:locality" content="Orlando, FL">
 
-	<link href="https://www.smirne.com/css/style.css" rel="stylesheet" type="text/css">
-	<link href="https://www.smirne.com/css/theming.css" rel="stylesheet" type="text/css">
-	<link href="https://www.smirne.com/css/web.css" rel="stylesheet" type="text/css">
-	<link href="https://www.smirne.com/css/mobilenavigation.css" rel="stylesheet" type="text/css">
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
+	<link href="../css/theming.css" rel="stylesheet" type="text/css">
+	<link href="../css/web.css" rel="stylesheet" type="text/css">
+	<link href="../css/mobilenavigation.css" rel="stylesheet" type="text/css">
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="https://www.smirne.com/js/mobilenavigation.js"></script>
+	<script type="text/javascript" src="../js/mobilenavigation.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-638YGDY3XT"></script>
@@ -86,8 +86,6 @@
 		gtag('js', new Date());
 
 		gtag('config', 'G-638YGDY3XT');
-		
-		var year = new Date().getFullYear();
 	</script>
 </head>
 
@@ -99,7 +97,7 @@
 				<div class="diywebLiveArea">
 
 					<nav id="diyfeMobileNav" class="diyfeCA diyfeCA2" role="navigation">
-						<a title="Expand/collapse navigation">Expand/collapse navigation</a>
+						<a href="#" title="Expand/collapse navigation" aria-label="Toggle navigation menu">Expand/collapse navigation</a>
 						<ul class="mainNav1"><li class=" hasSubNavigation"><a data-page-id="52687" href="https://www.smirne.com" class=" level_1"><span>Home</span></a></li><li class="current hasSubNavigation"><a data-page-id="175076" href="https://www.smirne.com/resume" class="current level_1"><span>Resume</span></a></li></ul>
 					</nav>
 					<div id="diywebLogoArea" class="diyfeGE diywebLogoArea">
@@ -172,8 +170,9 @@
 						<div class="diyfeGE">
 							<div class="diywebGutter">
 								<div id="contentfooter">
-									<br> Flavio Smirne © 2012 - <script>document.write(year)</script>
+									<br> Flavio Smirne &copy; 2012 - <span id="footer-year"></span>
 								</div>
+								<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 							</div>
 						</div>
 					</div>

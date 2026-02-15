@@ -1,0 +1,22 @@
+# dotenv files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude Code
+.claude
+
+# Data files
+data/
