@@ -6,7 +6,9 @@ p { margin: 1em 0; }
 table { border-collapse: collapse; border-spacing: 0; }
 
 /* === Site Structure === */
-.site-container { position: relative; white-space: normal; word-wrap: break-word; line-height: 1.35; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -webkit-text-size-adjust: auto; background-color: transparent !important; }
+.site-container { position: relative; white-space: normal; word-wrap: break-word; line-height: 1.35; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -webkit-text-size-adjust: auto; background-color: transparent !important; min-height: 100vh; display: flex; flex-direction: column; }
+.site-container > .main-section { flex: 1; }
+.site-container > .site-footer { margin-top: auto; }
 .content-bounds { position: relative; margin: 0 auto; width: 960px; }
 .content-bounds::before, .content-bounds::after { content: " "; display: table; }
 .content-bounds::after { clear: both; }
@@ -40,7 +42,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .startpage .drawer-panel { display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; }
 .drawer-toggle { display: block; text-decoration: none !important; font-size: 32px; line-height: 60px; width: 80px; height: 60px; margin: 0 auto; border-radius: 50px 50px 0 0; text-align: center; cursor: pointer; }
 .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; }
-.drawer-panel.drawer-open .drawer-content { max-height: calc(100vh - 60px); overflow-y: auto; transition: max-height 0.6s ease-in; }
+.drawer-panel.drawer-open .drawer-content { max-height: calc(100vh - 200px); overflow-y: auto; transition: max-height 0.6s ease-in; }
 
 /* === Content === */
 .main-section { position: relative; }
@@ -68,6 +70,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 @media only screen and (max-width: 767px) {
 	.content-bounds { width: 530px; }
 	.logo-area { position: relative; }
+	.content-bounds.resume-bounds { margin: 0 !important; width: 100% !important; }
+	.resume-bounds .section-gutter { padding: 0; }
+	.resume-bounds .primary-col .content-pad { padding: 0; }
 }
 
 /* === Responsive: 568px === */
