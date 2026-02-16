@@ -15,7 +15,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* === Header === */
 .site-header { padding: 0 20px; position: relative; z-index: 20; box-shadow: 4px 0 50px #000; }
-.startpage .site-header { position: absolute; top: 0; left: 0; right: 0; }
+.startpage .site-header { position: fixed; top: 0; left: 0; right: 0; }
 .logo-area { position: absolute; padding: 10px; float: left; width: 33%; }
 .nav-main { float: right; max-width: 66%; }
 
@@ -74,13 +74,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 	.content-bounds.resume-bounds { margin: 0 !important; width: 100% !important; }
 	.resume-bounds .section-gutter { padding: 0; }
 	.resume-bounds .primary-col .content-pad { padding: 0; }
+	.drawer-panel.drawer-open .drawer-content { max-height: calc(100vh - 300px); }
 }
 
 /* === Responsive: 568px === */
 @media only screen and (max-width: 568px) {
 	.content-bounds { width: 420px; }
 	.site-header .logo-area, .site-header .nav-main { float: none; width: 100%; max-width: 100%; }
-	.startpage .site-header { position: absolute; }
 }
 
 /* === Responsive: 480px === */

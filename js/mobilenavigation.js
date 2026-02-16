@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (drawerBtn && drawerPanel) {
 		var drawerContent = drawerPanel.querySelector(".drawer-content");
 		var scrollHeight = 0;
-		var maxDrawerHeight = function () { return window.innerHeight - 200; };
+		var maxDrawerHeight = function () { return window.innerHeight - (window.innerWidth <= 767 ? 300 : 200); };
 		var SCROLL_STEP = 60;
 
 		function isOpen() { return scrollHeight > 0 || drawerPanel.classList.contains("drawer-open"); }
