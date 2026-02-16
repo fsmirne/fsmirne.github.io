@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	var scriptSrc = document.querySelector("script[src*='backgroundcycle']").getAttribute("src");
 	var basePath = scriptSrc.substring(0, scriptSrc.lastIndexOf("js/"));
-	var imageNames = ["background1.jpg", "background2.jpg", "background3.webp", "background4.jpg", "background5.jpg"];
+	var imageNames = ["background1.jpg", "background2.jpg", "background3.jpg", "background4.jpg", "background5.jpg"];
 	var images = imageNames.map(function (name) { return basePath + "img/backgrounds/" + name; });
 	var layers = document.querySelectorAll(".bg-layer");
 	var currentImage = 0;

@@ -43,6 +43,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .drawer-toggle { display: block; text-decoration: none !important; font-size: 32px; line-height: 60px; width: 80px; height: 60px; margin: 0 auto; border-radius: 50px 50px 0 0; text-align: center; cursor: pointer; }
 .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; }
 .drawer-panel.drawer-open .drawer-content { max-height: calc(100vh - 200px); overflow-y: auto; transition: max-height 0.6s ease-in; }
+.drawer-panel.drawer-scrolling .drawer-content { transition: none; overflow-y: auto; }
 
 /* === Content === */
 .main-section { position: relative; }
