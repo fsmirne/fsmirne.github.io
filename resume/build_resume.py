@@ -23,7 +23,6 @@ def set_run_font(run, size, bold=False, italic=False, color=COLOR_BLACK, small_c
 
 
 def add_bottom_border(paragraph):
-    """Add a thin bottom border (horizontal rule) below a paragraph."""
     pPr = paragraph._p.get_or_add_pPr()
     pBdr = parse_xml(
         f'<w:pBdr {nsdecls("w")}>'
@@ -51,32 +50,22 @@ def add_section_heading(doc, text):
 
 
 def add_job_header(doc, title, company, date_range, location):
-    """Add job title line: Bold Title — Company, Location  <tab>  Date (right-aligned)."""
     p = doc.add_paragraph()
     set_paragraph_spacing(p, before=8, after=2)
-
-    # Set a right-aligned tab stop at the right margin
     tab_stops = p.paragraph_format.tab_stops
     tab_stops.add_tab_stop(Inches(6.5), WD_ALIGN_PARAGRAPH.RIGHT)
-
     run_title = p.add_run(title)
     set_run_font(run_title, 11, bold=True)
-
     run_sep = p.add_run(" — ")
     set_run_font(run_sep, 11)
-
     run_company = p.add_run(company)
     set_run_font(run_company, 11, bold=True)
-
     run_loc = p.add_run(f", {location}")
     set_run_font(run_loc, 11, italic=True, color=COLOR_DARK_GRAY)
-
     run_tab = p.add_run("\t")
     set_run_font(run_tab, 11)
-
     run_date = p.add_run(date_range)
     set_run_font(run_date, 11, color=COLOR_DARK_GRAY)
-
     return p
 
 
@@ -95,14 +84,12 @@ def add_bullet(doc, text):
 def build():
     doc = Document()
 
-    # ── Page margins ──
     for section in doc.sections:
         section.top_margin = Cm(1.5)
         section.bottom_margin = Cm(1.5)
         section.left_margin = Inches(0.75)
         section.right_margin = Inches(0.75)
 
-    # ── Default style ──
     style = doc.styles["Normal"]
     style.font.name = FONT_BODY
     style.font.size = Pt(10)
@@ -133,11 +120,11 @@ def build():
     p = doc.add_paragraph()
     set_paragraph_spacing(p, after=2)
     summary = (
-        "Engineering and fraud prevention executive with 20+ years of experience building and scaling global risk, data, and software organizations."
-        "Currently leading a 40-person implementation and engineering function at Appriss Retail, driving AI-enabled automation, platform standardization,"
-        "and operating model simplification that reduced client go-live timelines by 40%. Previously built and led GameStop’s global e-commerce fraud organization,"
-        "reducing fraud losses by 68% through ML-driven detection, real-time risk systems, and cross-functional alignment with Finance, Security, and Engineering."
-        "Recognized in the top 1% at American Express with the President’s Award for delivering measurable risk reduction and platform-wide innovation."
+        "Data and engineering leader with 20+ years of experience building and scaling data organizations, defining enterprise data models, and driving data-informed decision-making across financial services, retail, and e-commerce. "
+        "Currently leading a 40-person organization at Appriss Retail spanning data engineering, software engineering, QA, and product delivery \u2014 responsible for the enterprise data model and data standards used by the world\u2019s largest retailers including Walmart and Home Depot. "
+        "Architected the Appriss Retail Data Model v3, the foundational data structure powering all products across POS and e-commerce channels, and the basis for AI/ML model generation in return authorization decisioning. "
+        "Previously defined industry-specific data models at Accertify (American Express) across retail, airline/travel, and ticketing verticals, deployed globally. "
+        "Track record of building high-performing teams, establishing data governance and reliability standards, and partnering with executives to embed analytics into organizational decision-making."
     )
     run = p.add_run(summary)
     set_run_font(run, 10)
@@ -150,45 +137,46 @@ def build():
     # ── Appriss Retail ──
     add_job_header(doc, "Senior Director of Implementation", "Appriss Retail", "12/2024 – Present", "Irvine, CA (Remote)")
     for b in [
-        "Simplified and restructured the implementation organization, redefining reporting lines and roles across 8 direct reports (4 SWE Managers, 1 QA Manager, 1 Director of Data Engineering, 1 Product Owner, 1 Scrum Master) and ~40 total staff.",
+        "Lead a 40-person organization across 8 direct reports (4 SWE Managers, 1 QA Manager, 1 Director of Data Engineering, 1 Product Owner, 1 Scrum Master), owning data engineering, software engineering, QA, and product delivery.",
+        "Architected the Appriss Retail Data Model v3 \u2014 the baseline data structure for all products across POS and e-commerce channels, used by data science as the foundation for AI/ML model generation in return authorization decisioning.",
+        "Own data standards for all Appriss Retail clients, including some of the world\u2019s largest retailers (Walmart, Home Depot), ensuring data reliability, governance, and consistency at enterprise scale.",
+        "Led company-wide data standardization initiative, establishing consistent definitions across all business units and enabling self-service analytics and reporting for cross-functional stakeholders.",
+        "Deployed AI-driven tooling for automated data discovery and QA validation, significantly reducing manual effort in ETL pipelines and data processing workflows.",
         "Reduced client go-live time by 40% through process redesign, workflow automation, and organizational streamlining.",
-        "Deployed AI-driven tooling for automated data discovery and QA validation, significantly reducing manual effort in ETL pipelines and data definition workflows.",
-        "Architected a universal order model unifying retail and e-commerce channels, eliminating data silos across the platform.",
-        "Led company-wide data standardization initiative, establishing consistent definitions across all business units.",
-        "Own the global implementation process end-to-end, spanning software engineering, QA, data engineering, and product delivery.",
     ]:
         add_bullet(doc, b)
 
     # ── GameStop ──
     add_job_header(doc, "Director, E-Commerce Fraud", "GameStop", "03/2022 – 12/2024", "Grapevine, TX (Remote)")
     for b in [
-        "Inherited an under-resourced fraud function and transformed it into a global operation, driving key optimizations and building the technology stack from the ground up.",
-        "Reduced fraud rates by 68% through machine learning techniques, fraud trend analysis, policy rules, and real-time alert systems.",
-        "Collaborated directly with the CFO on loss prevention, the CISO on security, and the CTO on technical architecture.",
-        "Developed and implemented strategies to combat ATO, card testing, AML, transaction fraud and return fraud.",
-        "Built and automated the global chargeback mitigation and response programs, turning a reactive process into a proactive, data-driven pipeline.",
-        "Stood up real-time monitoring and alerting infrastructure on GCP BigQuery, Amazon S3, and REST-based integrations with 3rd party data providers.",
+        "Inherited an under-resourced fraud function and transformed it into a global fraud and analytics operation, driving key optimizations and building the technology stack from the ground up.",
+        "Reduced fraud rates by 68% through ML-driven detection models, data-driven policy optimization, and real-time decisioning systems.",
+        "Built a comprehensive fraud analytics and reporting infrastructure on GCP BigQuery, Amazon S3, and REST-based integrations \u2014 enabling data-driven decision-making across fraud, finance, and executive leadership.",
+        "Partnered directly with the CFO, CISO, and CTO to embed data-informed risk management into organizational priorities and strategic planning.",
+        "Built and automated the global chargeback mitigation and response programs, transforming a reactive process into a proactive, analytics-driven pipeline.",
+        "Developed and implemented strategies to combat ATO, card testing, AML, transaction fraud, and return fraud using advanced analytics and ML techniques.",
     ]:
         add_bullet(doc, b)
 
     # ── Accertify ──
     add_job_header(doc, "Manager, Solution Productization", "Accertify (American Express)", "01/2014 – 03/2022", "Itasca, IL")
     for b in [
-        "Created the solution productization function from scratch, defining the playbook for standardizing anti-fraud systems across retail, digital, travel, airline, and ticketing verticals.",
-        "Designed reusable fraud and chargeback prevention components deployed to every Accertify client globally.",
-        "Rewrote core fraud detection algorithms, materially improving accuracy and reducing false positives across the platform.",
+        "Defined industry-specific data models for retail, airline/travel, and ticketing verticals \u2014 foundational schemas deployed to every Accertify client globally and used as the basis for fraud detection, analytics, and reporting.",
+        "Created the solution productization function from scratch, building the playbook for standardizing data structures and analytics platforms across multiple industries.",
+        "Designed reusable data-driven fraud detection and analytics components, establishing scalable patterns for data access, reporting, and decision support.",
+        "Built a comprehensive analytics and reporting system that became a key differentiator in client retention and sales \u2014 enabling self-service insights for both internal teams and clients.",
+        "Rewrote core detection algorithms, materially improving accuracy and reducing false positives through rigorous data analysis and experimentation.",
         "Recognized with the President's Award for top 1% performers globally at American Express.",
-        "Built a comprehensive fraud analytics and reporting system that became a key differentiator in client retention and sales.",
-        "Coordinated cross-functional teams across engineering, product, and client services to ship fraud prevention tooling into existing client infrastructures with zero downtime.",
+        "Coordinated cross-functional teams across engineering, product, data science, and client services to ship analytics and data platform tooling with zero downtime.",
     ]:
         add_bullet(doc, b)
 
     # ── State Farm ──
     add_job_header(doc, "Lead Developer, Mobile / Web", "State Farm Insurance", "04/2008 – 01/2014", "Bloomington, IL")
     for b in [
+        "Architected the backend service aggregation portal that unified data feeds across all mobile platforms into a single API layer \u2014 a large-scale data integration and access project.",
         "Led the development of State Farm Pocket Agent for Windows Phone 7 and 8, one of the first mobile insurance apps in the industry.",
-        "Architected the backend service aggregation portal that unified data feeds across all mobile platforms into a single API layer.",
-        "Won State Farm Hack Day for two consecutive years (2009–2010), prototyping features later adopted into production products.",
+        "Won State Farm Hack Day for two consecutive years (2009\u20132010), prototyping features later adopted into production products.",
         "Introduced code review practices and development standards that became the team's baseline for quality and maintainability.",
     ]:
         add_bullet(doc, b)
@@ -196,7 +184,7 @@ def build():
     # ── Realinked ──
     add_job_header(doc, "CTO", "Realinked.com", "02/2010 – 08/2011", "Chicago, IL")
     for b in [
-        "Founded and built an online real estate brokerage from zero — designed, developed, and operated the full technology stack.",
+        "Founded and built an online real estate brokerage from zero \u2014 designed the full data architecture, technology stack, and analytics infrastructure.",
         "Drove the platform to profitability and executed a successful exit within two years.",
     ]:
         add_bullet(doc, b)
@@ -205,58 +193,52 @@ def build():
     add_job_header(doc, "Software Engineering Manager", "Wolfram Research", "03/2004 – 04/2008", "Champaign, IL")
     for b in [
         "Promoted from tech support to software engineering manager within two years, recognized for technical depth and leadership potential.",
-        "Designed and shipped the Image Processing, Import/Export, and 3D Graphics frameworks — core components still in Mathematica today.",
+        "Designed and shipped the Image Processing, Import/Export, and 3D Graphics frameworks \u2014 core components still in Mathematica today.",
         "Led a team translating advanced mathematical research into production C++ across Windows, Linux, and macOS.",
         "Drove performance optimization initiatives that measurably improved processing efficiency in large-scale computational workloads.",
     ]:
         add_bullet(doc, b)
 
     # ═══════════════════════════════════════════
-    # 4. SKILLS (two-column table)
+    # 4. SKILLS
     # ═══════════════════════════════════════════
     add_section_heading(doc, "Skills")
 
     leadership_skills = [
-        "Global Org Design & Restructuring",
+        "Data Org Building & Talent Development",
+        "Enterprise Data Governance & Standards",
         "Cross-Functional Program Leadership",
-        "Vendor & Partner Strategy",
-        "C-Suite P&L Reporting & ROI Delivery",
+        "Executive Stakeholder Partnership",
+        "Data-Driven Decision-Making Culture",
         "Agile Transformation / Scrum at Scale",
-        "Mentorship & Talent Development",
-        "Stakeholder Management (C-Suite)",
+        "Vendor & Partner Strategy",
         "Change Management & Process Redesign",
     ]
     technical_skills = [
-        "LLM / Generative AI (GPT, Claude, RAG)",
-        "ML-Driven Fraud Detection & Prevention",
-        "Returns Authorization & Policy Engines",
-        "Chargeback Mitigation & Dispute Mgmt",
-        "AI-Automated ETL, Data Discovery & QA",
+        "Enterprise Data Modeling & Architecture",
+        "AI/ML Model Enablement (LLMs, Traditional ML)",
+        "Self-Service Analytics & Reporting Platforms",
+        "Data Standardization & Quality at Scale",
         "Python, C#/.NET, SQL, JavaScript",
         "PostgreSQL, MS SQL, GCP BigQuery",
-        "RESTful APIs, Microservices, Docker",
-        "Real-Time Monitoring & Alerting Systems",
+        "ETL Pipeline Design & Automation",
         "Tableau / Power BI / Splunk",
     ]
 
     max_rows = max(len(leadership_skills), len(technical_skills))
-    # +1 for header row
     table = doc.add_table(rows=max_rows + 1, cols=2)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = True
 
-    # Header row
-    for ci, header in enumerate(["Leadership & Global Operations", "Technical & AI / Automation"]):
+    for ci, header in enumerate(["Leadership & Operations", "Technical & Data"]):
         cell = table.rows[0].cells[ci]
         cell.text = ""
         p = cell.paragraphs[0]
         run = p.add_run(header)
         set_run_font(run, 10, bold=True)
-        # Light gray shading
         shading = parse_xml(f'<w:shd {nsdecls("w")} w:fill="F0F0F0" w:val="clear"/>')
         cell._tc.get_or_add_tcPr().append(shading)
 
-    # Data rows
     for ri in range(max_rows):
         left = leadership_skills[ri] if ri < len(leadership_skills) else ""
         right = technical_skills[ri] if ri < len(technical_skills) else ""
@@ -267,7 +249,6 @@ def build():
             run = p.add_run(text)
             set_run_font(run, 10)
 
-    # Remove table borders for a cleaner look, keep only subtle internal lines
     tbl = table._tbl
     tblPr = tbl.tblPr if tbl.tblPr is not None else parse_xml(f'<w:tblPr {nsdecls("w")}/>')
     borders = parse_xml(
@@ -293,21 +274,15 @@ def build():
     ]:
         p = doc.add_paragraph()
         set_paragraph_spacing(p, before=2, after=2)
-
-        # Right-aligned tab for year
         tab_stops = p.paragraph_format.tab_stops
         tab_stops.add_tab_stop(Inches(6.5), WD_ALIGN_PARAGRAPH.RIGHT)
-
         run = p.add_run(degree)
         set_run_font(run, 10, bold=True)
-
         run = p.add_run(f" — {school}")
         set_run_font(run, 10)
-
         if note:
             run = p.add_run(f" ({note})")
             set_run_font(run, 10, italic=True, color=COLOR_DARK_GRAY)
-
         run = p.add_run(f"\t{year}")
         set_run_font(run, 10, color=COLOR_DARK_GRAY)
 
