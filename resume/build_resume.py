@@ -162,7 +162,7 @@ def build():
     # ── GameStop ──
     add_job_header(doc, "Director, E-Commerce Fraud", "GameStop", "03/2022 – 12/2024", "Grapevine, TX (Remote)")
     for b in [
-        "Inherited an under-resourced fraud function and transformed it into a global operation, building and leading a team of managers, engineers and analysts from the ground up.",
+        "Inherited an under-resourced fraud function and transformed it into a global operation, driving key optimizations and building the technology stack from the ground up.",
         "Reduced fraud rates by 68% through machine learning techniques, fraud trend analysis, policy rules, and real-time alert systems.",
         "Collaborated directly with the CFO on loss prevention, the CISO on security, and the CTO on technical architecture.",
         "Developed and implemented strategies to combat ATO, card testing, AML, transaction fraud and return fraud.",
