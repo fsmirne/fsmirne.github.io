@@ -121,10 +121,8 @@ def build():
     set_paragraph_spacing(p, after=2)
     summary = (
         "Data and engineering leader with 20+ years of experience building and scaling data organizations, defining enterprise data models, and driving data-informed decision-making across financial services, retail, and e-commerce. "
-        "Currently leading a 40-person organization at Appriss Retail spanning data engineering, software engineering, QA, and product delivery \u2014 responsible for the enterprise data model and data standards used by the world\u2019s largest retailers including Walmart and Home Depot. "
-        "Architected the Appriss Retail Data Model v3, the foundational data structure powering all products across POS and e-commerce channels, and the basis for AI/ML model generation in return authorization decisioning. "
-        "Previously defined industry-specific data models at Accertify (American Express) across retail, airline/travel, and ticketing verticals, deployed globally. "
-        "Track record of building high-performing teams, establishing data governance and reliability standards, and partnering with executives to embed analytics into organizational decision-making."
+        "Currently leading a 40-person organization at Appriss Retail spanning data engineering, software engineering, QA, and product delivery \u2014 responsible for the enterprise data model and data standards underpinning 40% of all U.S. omnichannel transactions across 60+ of the top 100 U.S. retailers. "
+        "Architected the Appriss Retail Data Model v3, the foundational data structure powering all products across POS and e-commerce channels, and the basis for AI/ML model generation in return authorization decisioning."
     )
     run = p.add_run(summary)
     set_run_font(run, 10)
@@ -138,8 +136,8 @@ def build():
     add_job_header(doc, "Senior Director of Implementation", "Appriss Retail", "12/2024 – Present", "Irvine, CA (Remote)")
     for b in [
         "Lead a 40-person organization across 8 direct reports (4 SWE Managers, 1 QA Manager, 1 Director of Data Engineering, 1 Product Owner, 1 Scrum Master), owning data engineering, software engineering, QA, and product delivery.",
-        "Architected the Appriss Retail Data Model v3 \u2014 the baseline data structure for all products across POS and e-commerce channels, used by data science as the foundation for AI/ML model generation in return authorization decisioning.",
-        "Own data standards for all Appriss Retail clients, including some of the world\u2019s largest retailers (Walmart, Home Depot), ensuring data reliability, governance, and consistency at enterprise scale.",
+        "Architected the Appriss Retail Data Model v3 \u2014 the baseline data structure for all products across POS and e-commerce channels, processing 40% of all U.S. omnichannel transactions and used by data science as the foundation for AI/ML model generation in return authorization decisioning.",
+        "Own data standards for 60+ of the top 100 U.S. retailers, ensuring data reliability, governance, and consistency at enterprise scale.",
         "Led company-wide data standardization initiative, establishing consistent definitions across all business units and enabling self-service analytics and reporting for cross-functional stakeholders.",
         "Deployed AI-driven tooling for automated data discovery and QA validation, significantly reducing manual effort in ETL pipelines and data processing workflows.",
         "Reduced client go-live time by 40% through process redesign, workflow automation, and organizational streamlining.",
@@ -149,12 +147,12 @@ def build():
     # ── GameStop ──
     add_job_header(doc, "Director, E-Commerce Fraud", "GameStop", "03/2022 – 12/2024", "Grapevine, TX (Remote)")
     for b in [
-        "Inherited an under-resourced fraud function and transformed it into a global fraud and analytics operation, driving key optimizations and building the technology stack from the ground up.",
+        "Inherited an under-resourced fraud function and built it into a global fraud and analytics operation \u2014 hiring the team, selecting vendors, and standing up the technology stack from the ground up.",
         "Reduced fraud rates by 68% through ML-driven detection models, data-driven policy optimization, and real-time decisioning systems.",
         "Built a comprehensive fraud analytics and reporting infrastructure on GCP BigQuery, Amazon S3, and REST-based integrations \u2014 enabling data-driven decision-making across fraud, finance, and executive leadership.",
         "Partnered directly with the CFO, CISO, and CTO to embed data-informed risk management into organizational priorities and strategic planning.",
         "Built and automated the global chargeback mitigation and response programs, transforming a reactive process into a proactive, analytics-driven pipeline.",
-        "Developed and implemented strategies to combat ATO, card testing, AML, transaction fraud, and return fraud using advanced analytics and ML techniques.",
+        "Developed ML-based detection models and advanced analytics strategies targeting ATO, card testing, AML, and transaction fraud, materially reducing exposure across all e-commerce channels.",
     ]:
         add_bullet(doc, b)
 
@@ -162,12 +160,11 @@ def build():
     add_job_header(doc, "Manager, Solution Productization", "Accertify (American Express)", "01/2014 – 03/2022", "Itasca, IL")
     for b in [
         "Defined industry-specific data models for retail, airline/travel, and ticketing verticals \u2014 foundational schemas deployed to every Accertify client globally and used as the basis for fraud detection, analytics, and reporting.",
-        "Created the solution productization function from scratch, building the playbook for standardizing data structures and analytics platforms across multiple industries.",
-        "Designed reusable data-driven fraud detection and analytics components, establishing scalable patterns for data access, reporting, and decision support.",
         "Built a comprehensive analytics and reporting system that became a key differentiator in client retention and sales \u2014 enabling self-service insights for both internal teams and clients.",
         "Rewrote core detection algorithms, materially improving accuracy and reducing false positives through rigorous data analysis and experimentation.",
+        "Designed reusable data-driven fraud detection and analytics components, establishing scalable patterns for data access, reporting, and decision support.",
         "Recognized with the President's Award for top 1% performers globally at American Express.",
-        "Coordinated cross-functional teams across engineering, product, data science, and client services to ship analytics and data platform tooling with zero downtime.",
+        "Coordinated cross-functional teams across engineering, product, data science, and client services to deliver analytics and data platform tooling with zero downtime.",
     ]:
         add_bullet(doc, b)
 
@@ -176,8 +173,6 @@ def build():
     for b in [
         "Architected the backend service aggregation portal that unified data feeds across all mobile platforms into a single API layer \u2014 a large-scale data integration and access project.",
         "Led the development of State Farm Pocket Agent for Windows Phone 7 and 8, one of the first mobile insurance apps in the industry.",
-        "Won State Farm Hack Day for two consecutive years (2009\u20132010), prototyping features later adopted into production products.",
-        "Introduced code review practices and development standards that became the team's baseline for quality and maintainability.",
     ]:
         add_bullet(doc, b)
 
@@ -195,7 +190,6 @@ def build():
         "Promoted from tech support to software engineering manager within two years, recognized for technical depth and leadership potential.",
         "Designed and shipped the Image Processing, Import/Export, and 3D Graphics frameworks \u2014 core components still in Mathematica today.",
         "Led a team translating advanced mathematical research into production C++ across Windows, Linux, and macOS.",
-        "Drove performance optimization initiatives that measurably improved processing efficiency in large-scale computational workloads.",
     ]:
         add_bullet(doc, b)
 
@@ -295,6 +289,11 @@ def build():
     set_paragraph_spacing(p, after=4)
     run = p.add_run("English  |  Portuguese  |  Spanish")
     set_run_font(run, 10)
+
+    # ── Metadata ──
+    props = doc.core_properties
+    props.author = "Flavio Smirne"
+    props.comments = ""
 
     # ── Save ──
     out_path = "./Resume.docx"
