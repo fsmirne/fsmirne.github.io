@@ -189,7 +189,7 @@ def build():
     for b in [
         "Promoted from tech support to software engineering manager within two years, recognized for technical depth and leadership potential.",
         "Designed and shipped the Image Processing, Import/Export, and 3D Graphics frameworks \u2014 core components still in Mathematica today.",
-        "Led a team translating advanced mathematical research into production C++ across Windows, Linux, and macOS.",
+        "Managed the Data Import and Export team, owning all data ingestion capabilities of Mathematica across dozens of file formats and data sources.",
     ]:
         add_bullet(doc, b)
 
