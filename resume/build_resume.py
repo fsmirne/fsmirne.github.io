@@ -139,6 +139,7 @@ def build():
         "Architected the Appriss Retail Data Model v3 \u2014 the baseline data structure for all products across POS and e-commerce channels, processing 40% of all U.S. omnichannel transactions and used by data science as the foundation for AI/ML model generation in return authorization decisioning.",
         "Own data standards for 60+ of the top 100 U.S. retailers, ensuring data reliability, governance, and consistency at enterprise scale.",
         "Led company-wide data standardization initiative, establishing consistent definitions across all business units and enabling self-service analytics and reporting for cross-functional stakeholders.",
+        "Leading the migration of the enterprise ETL pipeline from Azure/Python to Snowflake/dbt across all clients, modernizing the data platform for scalability, governance, and self-service analytics.",
         "Deployed AI-driven tooling for automated data discovery and QA validation, significantly reducing manual effort in ETL pipelines and data processing workflows.",
         "Reduced client go-live time by 40% through process redesign, workflow automation, and organizational streamlining.",
     ]:
@@ -150,6 +151,7 @@ def build():
         "Inherited an under-resourced fraud function and built it into a global fraud and analytics operation \u2014 hiring the team, selecting vendors, and standing up the technology stack from the ground up.",
         "Reduced fraud rates by 68% through ML-driven detection models, data-driven policy optimization, and real-time decisioning systems.",
         "Built a comprehensive fraud analytics and reporting infrastructure on GCP BigQuery, Amazon S3, and REST-based integrations \u2014 enabling data-driven decision-making across fraud, finance, and executive leadership.",
+        "Designed and built fraud and chargeback visualization dashboards, then drove company-wide adoption as the standard tool for tracking organizational and individual employee performance metrics.",
         "Partnered directly with the CFO, CISO, and CTO to embed data-informed risk management into organizational priorities and strategic planning.",
         "Built and automated the global chargeback mitigation and response programs, transforming a reactive process into a proactive, analytics-driven pipeline.",
         "Developed ML-based detection models and advanced analytics strategies targeting ATO, card testing, AML, and transaction fraud, materially reducing exposure across all e-commerce channels.",
