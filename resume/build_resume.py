@@ -120,9 +120,9 @@ def build():
     p = doc.add_paragraph()
     set_paragraph_spacing(p, after=2)
     summary = (
-        "Data and engineering leader with 20+ years of experience building and scaling data organizations, defining enterprise data models, and driving data-informed decision-making across financial services, retail, and e-commerce. "
-        "Currently leading a 40-person organization at Appriss Retail spanning data engineering, software engineering, QA, and product delivery \u2014 responsible for the enterprise data model and data standards underpinning 40% of all U.S. omnichannel transactions across 60+ of the top 100 U.S. retailers. "
-        "Architected the Appriss Retail Data Model v3, the foundational data structure powering all products across POS and e-commerce channels, and the basis for AI/ML model generation in return authorization decisioning."
+        "Senior technology and business leader with 20+ years of experience building and scaling organizations, owning budgets and roadmaps, and partnering closely with C-level executives to drive data-informed strategy across financial services, retail, and e-commerce. "
+        "Currently leads a 40-person organization at Appriss Retail spanning data engineering, software engineering, QA, and product delivery \u2014 owning the enterprise data model and data standards underpinning 40% of all U.S. omnichannel transactions across 60+ of the top 100 U.S. retailers. "
+        "Pairs a deep data engineering and architecture background with a proven record of running entire business functions end to end, including ownership of GameStop's e-commerce fraud function across strategy, budget, team, and technology."
     )
     run = p.add_run(summary)
     set_run_font(run, 10)
@@ -137,24 +137,24 @@ def build():
     for b in [
         "Lead a 40-person organization across 8 direct reports (4 SWE Managers, 1 QA Manager, 1 Director of Data Engineering, 1 Product Owner, 1 Scrum Master), owning data engineering, software engineering, QA, and product delivery.",
         "Architected the Appriss Retail Data Model v3 \u2014 the baseline data structure for all products across POS and e-commerce channels, processing 40% of all U.S. omnichannel transactions and used by data science as the foundation for AI/ML model generation in return authorization decisioning.",
-        "Own data standards for 60+ of the top 100 U.S. retailers, ensuring data reliability, governance, and consistency at enterprise scale.",
+        "Own data standards and governance for 60+ of the top 100 U.S. retailers, ensuring data reliability, protection, and consistency at enterprise scale.",
+        "Defining and executing the platform roadmap to modernize the enterprise data ingestion pipeline from Azure/Python to Snowflake/dbt across all clients \u2014 re-platforming for scalability, governance, and self-service analytics.",
         "Led company-wide data standardization initiative, establishing consistent definitions across all business units and enabling self-service analytics and reporting for cross-functional stakeholders.",
-        "Leading the migration of the enterprise ETL pipeline from Azure/Python to Snowflake/dbt across all clients, modernizing the data platform for scalability, governance, and self-service analytics.",
-        "Deployed AI-driven tooling for automated data discovery and QA validation, significantly reducing manual effort in ETL pipelines and data processing workflows.",
-        "Reduced client go-live time by 40% through process redesign, workflow automation, and organizational streamlining.",
+        "Manage vendor relationships and technology evaluations for the data platform, contributing to budget definition for the vendor-replacement initiative driving the modernization.",
+        "Deployed AI-driven tooling for automated data discovery and QA validation, and reduced client go-live time by 40% through process redesign and workflow automation.",
     ]:
         add_bullet(doc, b)
 
     # ── GameStop ──
     add_job_header(doc, "Director, E-Commerce Fraud", "GameStop", "03/2022 – 12/2024", "Grapevine, TX (Remote)")
     for b in [
-        "Inherited an under-resourced fraud function and built it into a global fraud and analytics operation \u2014 hiring the team, selecting vendors, and standing up the technology stack from the ground up.",
+        "Owned the entire e-commerce fraud function end to end \u2014 strategy, team, technology, operations, and the department budget (including vendor and tooling spend) \u2014 reporting performance directly to the CFO, CISO, and CTO and embedding data-informed risk management into strategic planning.",
+        "Built and led the fraud team, retaining and upskilling existing staff while revamping the organization's technology and tooling and strengthening operational integration with the information security function.",
+        "Replaced a legacy rules-based Accertify engine with an AI/ML-first fraud detection architecture, modernizing the full detection and real-time decisioning technology stack.",
         "Reduced fraud rates by 68% through ML-driven detection models, data-driven policy optimization, and real-time decisioning systems.",
         "Built a comprehensive fraud analytics and reporting infrastructure on GCP BigQuery, Amazon S3, and REST-based integrations \u2014 enabling data-driven decision-making across fraud, finance, and executive leadership.",
         "Designed and built fraud and chargeback visualization dashboards, then drove company-wide adoption as the standard tool for tracking organizational and individual employee performance metrics.",
-        "Partnered directly with the CFO, CISO, and CTO to embed data-informed risk management into organizational priorities and strategic planning.",
-        "Built and automated the global chargeback mitigation and response programs, transforming a reactive process into a proactive, analytics-driven pipeline.",
-        "Developed ML-based detection models and advanced analytics strategies targeting ATO, card testing, AML, and transaction fraud, materially reducing exposure across all e-commerce channels.",
+        "Built and automated the global chargeback mitigation and response programs, transforming a reactive process into a proactive, analytics-driven pipeline targeting ATO, card testing, AML, and transaction fraud.",
     ]:
         add_bullet(doc, b)
 
@@ -201,13 +201,13 @@ def build():
     add_section_heading(doc, "Skills")
 
     leadership_skills = [
-        "Data Org Building & Talent Development",
+        "Business Function & Team Building",
+        "Budget Ownership & Roadmap Planning",
         "Enterprise Data Governance & Standards",
         "Cross-Functional Program Leadership",
-        "Executive Stakeholder Partnership",
+        "Executive (C-Level) Stakeholder Partnership",
         "Data-Driven Decision-Making Culture",
-        "Agile Transformation / Scrum at Scale",
-        "Vendor & Partner Strategy",
+        "Vendor Management & Technology Evaluation",
         "Change Management & Process Redesign",
     ]
     technical_skills = [
