@@ -20,3 +20,6 @@ __pycache__/
 
 # Data files
 data/
+
+# Generated resume docx (transient build output)
+resume/Resume.docx
