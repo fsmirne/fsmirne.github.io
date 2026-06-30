@@ -7,6 +7,7 @@ Thumbs.db
 [Dd]esktop.ini
 
 # Editor files
+.vs/
 .vscode/
 .idea/
 *.swp
